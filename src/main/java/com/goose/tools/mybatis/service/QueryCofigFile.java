@@ -43,7 +43,7 @@ public class QueryCofigFile {
 	            out.println("  </resultMap>");
 	            out.println();
 
-	            out.println("  <!-- ¼ÆÊı£¨¶ÔÏó£© -->");
+	            out.println("  <!-- è®¡æ•°ï¼ˆå¯¹è±¡ï¼‰ -->");
 	            out.println("  <select id=\"count\" resultType=\"java.lang.Integer\" parameterType=\"" + fullPackage + "\">");
 	            out.println("    select count(1) from " + tableName + "");
 	            out.println("    <trim prefix=\"where\" prefixOverrides=\"and | or\">");
@@ -52,7 +52,7 @@ public class QueryCofigFile {
 	                out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + " != null\">");
 	                out.println("        and " + tableProperties.getName() + " = #{" + MyUtils.formatToVarName(tableProperties.getName()) + ",jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                out.println("      </if>");
-	                //ĞÂÔö°´ÈÕÆÚÍ³¼ÆÊıÁ¿
+	                //æ–°å¢æŒ‰æ—¥æœŸç»Ÿè®¡æ•°é‡
 	                String type = MyUtils.formatDataType(tableProperties.getDateType());
 	                if ("Date".equals(type))
 	                {
@@ -62,7 +62,7 @@ public class QueryCofigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -75,7 +75,7 @@ public class QueryCofigFile {
 	            out.println("  </select>");
 	            out.println();
 	           
-	            out.println("  <!-- ²éÑ¯£¨ID£© -->");
+	            out.println("  <!-- æŸ¥è¯¢ï¼ˆIDï¼‰ -->");
 	            out.println("  <select id=\"findById\" resultMap=\"BaseResultMap\" parameterType=\"" + idFullType + "\" >");
 	            out.println("    select ");
 	            out.print("      ");
@@ -101,7 +101,7 @@ public class QueryCofigFile {
 	            out.println("  </select>");
 	            out.println();
 
-	            out.println("  <!-- ²éÑ¯£¨¶ÔÏó£© -->");
+	            out.println("  <!-- æŸ¥è¯¢ï¼ˆå¯¹è±¡ï¼‰ -->");
 	            out.println("  <select id=\"findByExample\" resultMap=\"BaseResultMap\" parameterType=\"" + fullPackage + "\">");
 	            out.println("    select ");
 	            out.print("      ");
@@ -139,7 +139,7 @@ public class QueryCofigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -153,7 +153,7 @@ public class QueryCofigFile {
 	            out.println("  </select>");
 	            out.println();
 
-	            out.println("  <!-- ·ÖÒ³²éÑ¯£¨¸½´øÅÅĞò£© -->");
+	            out.println("  <!-- åˆ†é¡µæŸ¥è¯¢ï¼ˆé™„å¸¦æ’åºï¼‰ -->");
 	            out.println("  <select id=\"pageByExample\" resultMap=\"BaseResultMap\">");
 	            out.println("    select ");
 	            out.print("      ");
@@ -191,7 +191,7 @@ public class QueryCofigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -201,11 +201,11 @@ public class QueryCofigFile {
 	                }
 	            }
 	            out.println("    </trim>");
-	            //ÅÅĞò
+	            //æ’åº
 	            out.println("    <if test= \"orderBy != null\">");
 	            out.println("       order by ${orderBy}");
 	            out.println("    </if>");
-	            //·ÖÒ³
+	            //åˆ†é¡µ
 	            out.println("    <if test=\"size !=null\" >");
 	            out.println("      limit ");
 	            out.println("       <if test=\"start !=null\" >");

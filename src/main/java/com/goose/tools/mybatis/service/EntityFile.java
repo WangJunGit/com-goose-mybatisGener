@@ -67,13 +67,13 @@ public class EntityFile
                 String type = MyUtils.formatDataType(tableProperties.getDateType());
                 if ("Date".equals(type))
                 {
-                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_F;//" + tableProperties.getComment() + "£¬ÓÃÓÚ°´Ê±¼ä²éÑ¯£¬Èç¹û´Ë×Ö¶ÎÓĞÖµ£¬¿É²éÑ¯³ö>´Ë×Ö¶ÎÖµµÄ¼ÇÂ¼");
+                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_F;//" + tableProperties.getComment() + "ï¼Œç”¨äºæŒ‰æ—¶é—´æŸ¥è¯¢ï¼Œå¦‚æœæ­¤å­—æ®µæœ‰å€¼ï¼Œå¯æŸ¥è¯¢å‡º>æ­¤å­—æ®µå€¼çš„è®°å½•");
                     out.println();
-                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_T;//" + tableProperties.getComment() + "£¬ÓÃÓÚ°´Ê±¼ä²éÑ¯£¬Èç¹û´Ë×Ö¶ÎÓĞÖµ£¬¿É²éÑ¯³ö<´Ë×Ö¶ÎÖµµÄ¼ÇÂ¼");
+                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_T;//" + tableProperties.getComment() + "ï¼Œç”¨äºæŒ‰æ—¶é—´æŸ¥è¯¢ï¼Œå¦‚æœæ­¤å­—æ®µæœ‰å€¼ï¼Œå¯æŸ¥è¯¢å‡º<æ­¤å­—æ®µå€¼çš„è®°å½•");
                     out.println();
-                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_FE;//" + tableProperties.getComment() + "£¬ÓÃÓÚ°´Ê±¼ä²éÑ¯£¬Èç¹û´Ë×Ö¶ÎÓĞÖµ£¬¿É²éÑ¯³ö>=´Ë×Ö¶ÎÖµµÄ¼ÇÂ¼");
+                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_FE;//" + tableProperties.getComment() + "ï¼Œç”¨äºæŒ‰æ—¶é—´æŸ¥è¯¢ï¼Œå¦‚æœæ­¤å­—æ®µæœ‰å€¼ï¼Œå¯æŸ¥è¯¢å‡º>=æ­¤å­—æ®µå€¼çš„è®°å½•");
                     out.println();
-                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_TE;//" + tableProperties.getComment() + "£¬ÓÃÓÚ°´Ê±¼ä²éÑ¯£¬Èç¹û´Ë×Ö¶ÎÓĞÖµ£¬¿É²éÑ¯³ö<=´Ë×Ö¶ÎÖµµÄ¼ÇÂ¼");
+                    out.println("    private " + MyUtils.formatDataType(tableProperties.getDateType()) + " " + MyUtils.formatToVarName(tableProperties.getName()) + "_TE;//" + tableProperties.getComment() + "ï¼Œç”¨äºæŒ‰æ—¶é—´æŸ¥è¯¢ï¼Œå¦‚æœæ­¤å­—æ®µæœ‰å€¼ï¼Œå¯æŸ¥è¯¢å‡º<=æ­¤å­—æ®µå€¼çš„è®°å½•");
                     out.println();
                 }
             }
@@ -120,7 +120,7 @@ public class EntityFile
                     out.println("    {");
                     out.println("        this." + varNameTemp + "_T = " + varNameTemp + "_T;");
                     out.println("    }");
-                  //ĞÂÔö´óÓÚĞ¡ÓÚµÄÈÕÆÚÅĞ¶Ï
+                  //æ–°å¢å¤§äºå°äºçš„æ—¥æœŸåˆ¤æ–­
                     out.println("    public " + MyUtils.formatDataType(tableProperties.getDateType()) + " get" + classNameTemp + "_FE()");
                     out.println("    {");
                     out.println("        return " + varNameTemp + "_FE;");

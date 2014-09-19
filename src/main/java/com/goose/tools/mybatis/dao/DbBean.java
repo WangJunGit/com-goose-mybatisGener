@@ -38,12 +38,12 @@ public final class DbBean {
 		mysql_passwd = mysqlPasswd;
 	}
 	/**
-	 * JDBCÖ±Á¬
-	 * @param m_driver		Çı¶¯
-	 * @param m_url			µØÖ·
-	 * @param m_user		ÓÃ»§Ãû
-	 * @param m_password	ÃÜÂë
-	 * @return				ConnectionÁ¬½Ó
+	 * JDBCç›´è¿
+	 * @param m_driver		é©±åŠ¨
+	 * @param m_url			åœ°å€
+	 * @param m_user		ç”¨æˆ·å
+	 * @param m_password	å¯†ç 
+	 * @return				Connectionè¿æ¥
 	 * @throws Exception
 	 */
 	public static synchronized Connection getConnectionFromJDBC() throws Exception {

@@ -193,13 +193,13 @@ public class MyBatis extends javax.swing.JFrame
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt)
     {
-        // ÍË³ö
+        // é€€å‡º
         System.exit(0);
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
     {
-        // È·¶¨
+        // ç¡®å®š
         FrameInfo info = new FrameInfo();
         info.setIp(jTextField1.getText().trim());
         info.setPort(jTextField2.getText().trim());
@@ -207,14 +207,14 @@ public class MyBatis extends javax.swing.JFrame
         info.setUser(jTextField4.getText().trim());
         info.setPassword(new String(jPasswordField1.getPassword()));
         info.setPackage_base(jTextField5.getText().trim());
-        //TODO Ğ£Ñé
+        //TODO æ ¡éªŒ
         if (FileCreate.start(info))
         {
-            Data.printINFO(this, "Éú³É´úÂë³É¹¦");
+            Data.printINFO(this, "ç”Ÿæˆä»£ç æˆåŠŸ");
         }
         else
         {
-            Data.printINFO(this, "Éú³É´úÂëÊ§°Ü");
+            Data.printINFO(this, "ç”Ÿæˆä»£ç å¤±è´¥");
         }
     }
 

@@ -9,7 +9,7 @@ import com.goose.tools.mybatis.entity.TableProperties;
 public class MySql
 {
     /**
-     * ÁÐ³öËùÓÐ±í
+     * åˆ—å‡ºæ‰€æœ‰è¡¨
      * @param schema
      * @return
      */
@@ -27,7 +27,7 @@ public class MySql
     }
 
     /**
-     * ÁÐ³ö±íµÄËùÓÐ×Ö¶ÎµÄÊôÐÔ£¨ÁÐÃû¡¢Êý¾ÝÀàÐÍ¡¢×¢ÊÍ£©
+     * åˆ—å‡ºè¡¨çš„æ‰€æœ‰å­—æ®µçš„å±žæ€§ï¼ˆåˆ—åã€æ•°æ®ç±»åž‹ã€æ³¨é‡Šï¼‰
      * @param schema
      * @param tableName
      * @return

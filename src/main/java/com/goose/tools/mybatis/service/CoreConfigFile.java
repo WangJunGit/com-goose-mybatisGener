@@ -42,12 +42,12 @@ public class CoreConfigFile {
 	            out.println("  </resultMap>");
 	            out.println();
 
-	            out.println("  <!-- ĞÂÔö -->");
+	            out.println("  <!-- æ–°å¢ -->");
 	            out.println("  <insert id=\"add\" parameterType=\"" + fullPackage + "\" >");
-	            boolean is_auto_increment = false;//ÊÇ·ñ×Ô¶¯Ôö³¤
+	            boolean is_auto_increment = false;//æ˜¯å¦è‡ªåŠ¨å¢é•¿
 	            if (first.getColumn_type().equals("varchar(32)"))
 	            {
-	            	Data.printINFO(null, "className×Ö¶Î£¬"+first.getName()+"´æÔÚuuid");
+	            	Data.printINFO(null, "classNameå­—æ®µï¼Œ"+first.getName()+"å­˜åœ¨uuid");
 	                out.println("    <selectKey keyProperty=\"" + MyUtils.formatToVarName(idName) + "\" resultType=\"java.lang.String\" order=\"BEFORE\">select replace(uuid(), '-', '')</selectKey>");
 	            }
 	            else if (first.getExtra().equals("auto_increment"))
@@ -59,7 +59,7 @@ public class CoreConfigFile {
 	            out.print("      ");
 	            is_first = true;
 	            int i = 0;
-	            boolean is_hide_first = false;//ÊÇ·ñÒş²Ø¹ıÊ××Ö¶Î
+	            boolean is_hide_first = false;//æ˜¯å¦éšè—è¿‡é¦–å­—æ®µ
 	            for (TableProperties tableProperties : list)
 	            {
 	                if (!is_hide_first && is_auto_increment)
@@ -111,13 +111,13 @@ public class CoreConfigFile {
 	            out.println("  </insert>");
 	            out.println();
 
-	            out.println("  <!-- É¾³ı£¨ID£© -->");
+	            out.println("  <!-- åˆ é™¤ï¼ˆIDï¼‰ -->");
 	            out.println("  <delete id=\"deleteById\" parameterType=\"" + idFullType + "\" >");
 	            out.println("    delete from " + tableName + " where " + idName + " = #{" + MyUtils.formatToVarName(idName) + ",jdbcType=" + idJdbcType + "}");
 	            out.println("  </delete>");
 	            out.println();
 
-	            out.println("  <!-- É¾³ı£¨¶ÔÏó£© -->");
+	            out.println("  <!-- åˆ é™¤ï¼ˆå¯¹è±¡ï¼‰ -->");
 	            out.println("  <delete id=\"deleteByExample\" parameterType=\"" + fullPackage + "\">");
 	            out.println("    delete from " + tableName + "");
 	            out.println("    <trim prefix=\"where\" prefixOverrides=\"and | or\">");
@@ -135,7 +135,7 @@ public class CoreConfigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -148,7 +148,7 @@ public class CoreConfigFile {
 	            out.println("  </delete>");
 	            out.println();
 
-	            out.println("  <!-- È«²¿¸üĞÂ£¨timestamp×Ö¶Î³ıÍâ£© -->");
+	            out.println("  <!-- å…¨éƒ¨æ›´æ–°ï¼ˆtimestampå­—æ®µé™¤å¤–ï¼‰ -->");
 	            out.println("  <update id=\"updateAll\" parameterType=\"" + fullPackage + "\" >");
 	            out.println("    update " + tableName + " set");
 	            is_first = true;
@@ -174,7 +174,7 @@ public class CoreConfigFile {
 	            out.println("  </update>");
 	            out.println();
 
-	            out.println("  <!-- Ñ¡Ôñ¸üĞÂ£¨timestamp×Ö¶Î³ıÍâ£© -->");
+	            out.println("  <!-- é€‰æ‹©æ›´æ–°ï¼ˆtimestampå­—æ®µé™¤å¤–ï¼‰ -->");
 	            out.println("  <update id=\"updateSelected\" parameterType=\"" + fullPackage + "\" >");
 	            out.println("    update " + tableName);
 	            out.println("    <set>");
@@ -206,7 +206,7 @@ public class CoreConfigFile {
 	            out.println("  </update>");
 	            out.println();
 
-	            out.println("  <!-- ¼ÆÊı£¨¶ÔÏó£© -->");
+	            out.println("  <!-- è®¡æ•°ï¼ˆå¯¹è±¡ï¼‰ -->");
 	            out.println("  <select id=\"count\" resultType=\"java.lang.Integer\" parameterType=\"" + fullPackage + "\">");
 	            out.println("    select count(1) from " + tableName + "");
 	            out.println("    <trim prefix=\"where\" prefixOverrides=\"and | or\">");
@@ -215,7 +215,7 @@ public class CoreConfigFile {
 	                out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + " != null\">");
 	                out.println("        and " + tableProperties.getName() + " = #{" + MyUtils.formatToVarName(tableProperties.getName()) + ",jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                out.println("      </if>");
-	                //ĞÂÔö°´ÈÕÆÚÍ³¼ÆÊıÁ¿
+	                //æ–°å¢æŒ‰æ—¥æœŸç»Ÿè®¡æ•°é‡
 	                String type = MyUtils.formatDataType(tableProperties.getDateType());
 	                if ("Date".equals(type))
 	                {
@@ -225,7 +225,7 @@ public class CoreConfigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -238,7 +238,7 @@ public class CoreConfigFile {
 	            out.println("  </select>");
 	            out.println();
 	           
-	            out.println("  <!-- ²éÑ¯£¨ID£© -->");
+	            out.println("  <!-- æŸ¥è¯¢ï¼ˆIDï¼‰ -->");
 	            out.println("  <select id=\"findById\" resultMap=\"BaseResultMap\" parameterType=\"" + idFullType + "\" >");
 	            out.println("    select ");
 	            out.print("      ");
@@ -264,7 +264,7 @@ public class CoreConfigFile {
 	            out.println("  </select>");
 	            out.println();
 
-	            out.println("  <!-- ²éÑ¯£¨¶ÔÏó£© -->");
+	            out.println("  <!-- æŸ¥è¯¢ï¼ˆå¯¹è±¡ï¼‰ -->");
 	            out.println("  <select id=\"findByExample\" resultMap=\"BaseResultMap\" parameterType=\"" + fullPackage + "\">");
 	            out.println("    select ");
 	            out.print("      ");
@@ -302,7 +302,7 @@ public class CoreConfigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -316,7 +316,7 @@ public class CoreConfigFile {
 	            out.println("  </select>");
 	            out.println();
 
-	            out.println("  <!-- ·ÖÒ³²éÑ¯£¨¸½´øÅÅĞò£© -->");
+	            out.println("  <!-- åˆ†é¡µæŸ¥è¯¢ï¼ˆé™„å¸¦æ’åºï¼‰ -->");
 	            out.println("  <select id=\"pageByExample\" resultMap=\"BaseResultMap\">");
 	            out.println("    select ");
 	            out.print("      ");
@@ -354,7 +354,7 @@ public class CoreConfigFile {
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_T != null\">");
 	                    out.println("        and " + tableProperties.getName() + " &lt; #{" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_T,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
-	                    //ĞÂÔö´óÓÚµÈÓÚºÍĞ¡ÓÚµÈÓÚ
+	                    //æ–°å¢å¤§äºç­‰äºå’Œå°äºç­‰äº
 	                    out.println("      <if test= \"" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_FE != null\">");
 	                    out.println("        and " + tableProperties.getName() + " >= #{" + MyUtils.formatToVarName(tableName) + "." + MyUtils.formatToVarName(tableProperties.getName()) + "_FE,jdbcType=" + MyUtils.formatJdbcType(tableProperties.getDateType()) + "}");
 	                    out.println("      </if>");
@@ -364,11 +364,11 @@ public class CoreConfigFile {
 	                }
 	            }
 	            out.println("    </trim>");
-	            //ÅÅĞò
+	            //æ’åº
 	            out.println("    <if test= \"orderBy != null\">");
 	            out.println("       order by ${orderBy}");
 	            out.println("    </if>");
-	            //·ÖÒ³
+	            //åˆ†é¡µ
 	            out.println("    <if test=\"size !=null\" >");
 	            out.println("      limit ");
 	            out.println("       <if test=\"start !=null\" >");

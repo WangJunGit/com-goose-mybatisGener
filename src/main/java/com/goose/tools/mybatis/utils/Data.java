@@ -22,9 +22,9 @@ public class Data {
 	}
 	
 	/**
-     * »ñÈ¡ÏµÍ³ÓÃ»§Ãû
+     * è·å–ç³»ç»Ÿç”¨æˆ·å
      * 
-     * @return ÏµÍ³ÓÃ»§Ãû
+     * @return ç³»ç»Ÿç”¨æˆ·å
      */
     public static String getSystemUser() {
         Properties p = System.getProperties();
@@ -32,7 +32,7 @@ public class Data {
     }
 	
 	/**
-	 * »ñÈ¡Â·¾¶
+	 * è·å–è·¯å¾„
 	 * @return
 	 */
 	public static String getProjectLocalPath() {
@@ -49,7 +49,7 @@ public class Data {
 	}
 	
 	/**
-	 * ¾ÓÖĞÉèÖÃ
+	 * å±…ä¸­è®¾ç½®
 	 * @param com
 	 */
 	public static void setPosition(Component com) {
@@ -63,7 +63,7 @@ public class Data {
 	}
 	
 	/**
-	 * ÉÏÒÆ
+	 * ä¸Šç§»
 	 * @param jList
 	 */
 	public static void moveUp(javax.swing.JList jList) {
@@ -78,7 +78,7 @@ public class Data {
 	}
 
 	/**
-	 * ÏÂÒÆ
+	 * ä¸‹ç§»
 	 * @param jList
 	 */
 	public static void moveDown(javax.swing.JList jList) {
@@ -93,7 +93,7 @@ public class Data {
 	}
 	
 	/**
-	 * »ñÈ¡Ñ¡ÖĞµÄ¶ÔÏó
+	 * è·å–é€‰ä¸­çš„å¯¹è±¡
 	 * @param jList
 	 */
 	public static Object getSelectedObject(javax.swing.JList jList) {
@@ -106,7 +106,7 @@ public class Data {
 	}
 	
 	/**
-	 * Ìí¼Ó
+	 * æ·»åŠ 
 	 * @param jList
 	 * @param obj
 	 */
@@ -116,7 +116,7 @@ public class Data {
 	}
 
 	/**
-	 * É¾³ı
+	 * åˆ é™¤
 	 * @param jList
 	 */
 	public static void deleteList(javax.swing.JList jList) {
@@ -129,7 +129,7 @@ public class Data {
 	}
 	
 	/**
-	 * Çå¿Õ
+	 * æ¸…ç©º
 	 * @param jList
 	 */
 	public static void clearList(javax.swing.JList jList) {
@@ -141,27 +141,27 @@ public class Data {
 	}
 	
 	/**
-	 * µ¥¸öÓÒÒÆ
-	 * @param jListLeft		×ó²àÁĞ±í
-	 * @param jListRight	ÓÒ²àÁĞ±í
+	 * å•ä¸ªå³ç§»
+	 * @param jListLeft		å·¦ä¾§åˆ—è¡¨
+	 * @param jListRight	å³ä¾§åˆ—è¡¨
 	 */
 	public static void moveOneToRight(javax.swing.JList jListLeft, javax.swing.JList jListRight) {
 		moveOneElement(jListLeft, jListRight);
 	}
 	
 	/**
-	 * µ¥¸ö×óÒÆ
-	 * @param jListLeft		×ó²àÁĞ±í
-	 * @param jListRight	ÓÒ²àÁĞ±í
+	 * å•ä¸ªå·¦ç§»
+	 * @param jListLeft		å·¦ä¾§åˆ—è¡¨
+	 * @param jListRight	å³ä¾§åˆ—è¡¨
 	 */
 	public static void moveOneToLeft(javax.swing.JList jListLeft, javax.swing.JList jListRight) {
 		moveOneElement(jListRight, jListLeft);
 	}
 	
 	/**
-	 * ÒÆ¶¯µ¥¸öÔªËØ
-	 * @param jListSrc		ÒÆ³öµÄlist
-	 * @param jListDest		Ä¿±êlist
+	 * ç§»åŠ¨å•ä¸ªå…ƒç´ 
+	 * @param jListSrc		ç§»å‡ºçš„list
+	 * @param jListDest		ç›®æ ‡list
 	 */
 	private static void moveOneElement(javax.swing.JList jListSrc, javax.swing.JList jListDest) {
 		int x = jListSrc.getSelectedIndex();
@@ -175,25 +175,25 @@ public class Data {
 	}
 	
 	/**
-	 * ËùÓĞÓÒÒÆ
-	 * @param jListLeft		×ó²àÁĞ±í
-	 * @param jListRight	ÓÒ²àÁĞ±í
+	 * æ‰€æœ‰å³ç§»
+	 * @param jListLeft		å·¦ä¾§åˆ—è¡¨
+	 * @param jListRight	å³ä¾§åˆ—è¡¨
 	 */
 	public static void moveAllToRight(javax.swing.JList jListLeft, javax.swing.JList jListRight) {
 		moveAllElements(jListLeft, jListRight);
 	}
 
 	/**
-	 * ËùÓĞ×óÒÆ
-	 * @param jListLeft		×ó²àÁĞ±í
-	 * @param jListRight	ÓÒ²àÁĞ±í
+	 * æ‰€æœ‰å·¦ç§»
+	 * @param jListLeft		å·¦ä¾§åˆ—è¡¨
+	 * @param jListRight	å³ä¾§åˆ—è¡¨
 	 */
 	public static void moveAllToLeft(javax.swing.JList jListLeft, javax.swing.JList jListRight) {
 		moveAllElements(jListRight, jListLeft);
 	}
 	
 	/**
-	 * ÒÆ¶¯
+	 * ç§»åŠ¨
 	 * @param jListSrc
 	 * @param jListDest
 	 */
@@ -208,30 +208,30 @@ public class Data {
 	}
 	
 	/**
-	 * ÏµÍ³´íÎó
+	 * ç³»ç»Ÿé”™è¯¯
 	 * @param com
 	 */
 	public static void printERROR(Component com) {
-		JOptionPane.showMessageDialog(com, "ÏµÍ³³öÏÖÑÏÖØ´íÎó", "ÏµÍ³´íÎó", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(com, "ç³»ç»Ÿå‡ºç°ä¸¥é‡é”™è¯¯", "ç³»ç»Ÿé”™è¯¯", JOptionPane.ERROR_MESSAGE);
 	}
 
 	/**
-	 * ÌáÊ¾ĞÅÏ¢
+	 * æç¤ºä¿¡æ¯
 	 * @param com
 	 * @param info
 	 */
 	public static void printINFO(Component com, String info) {
-		JOptionPane.showMessageDialog(com, info, "ÌáÊ¾ĞÅÏ¢", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(com, info, "æç¤ºä¿¡æ¯", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	/**
-     * ÍùÏµÍ³Ä¿Â¼ÏÂĞ´ÈëÎÄ¼ş
+     * å¾€ç³»ç»Ÿç›®å½•ä¸‹å†™å…¥æ–‡ä»¶
      * 
      * @param filename
-     *            ÎÄ¼şÃû
+     *            æ–‡ä»¶å
      * @param content
-     *            ÄÚÈİ
-     * @return true-Ğ´Èë³É¹¦£¬false-Ğ´ÈëÊ§°Ü
+     *            å†…å®¹
+     * @return true-å†™å…¥æˆåŠŸï¼Œfalse-å†™å…¥å¤±è´¥
      */
     public static boolean writeToSys(String filename, String content) {
         PrintWriter out = null;
@@ -253,11 +253,11 @@ public class Data {
     }
 
     /**
-     * ´ÓÏµÍ³Ä¿Â¼ÏÂ¶ÁÈ¡ÎÄ¼ş
+     * ä»ç³»ç»Ÿç›®å½•ä¸‹è¯»å–æ–‡ä»¶
      * 
      * @param filename
-     *            ÎÄ¼şÃû
-     * @return ÎÄ¼şµÄÄÚÈİ
+     *            æ–‡ä»¶å
+     * @return æ–‡ä»¶çš„å†…å®¹
      */
     public static String readFromSys(String filename) {
         FileInputStream in = null;
@@ -280,9 +280,9 @@ public class Data {
     }
 
     /**
-     * »ñÈ¡ÏµÍ³ÁÙÊ±ÎÄ¼ş¼Ğ
+     * è·å–ç³»ç»Ÿä¸´æ—¶æ–‡ä»¶å¤¹
      * 
-     * @return ÏµÍ³ÁÙÊ±ÎÄ¼ş¼ĞÂ·¾¶
+     * @return ç³»ç»Ÿä¸´æ—¶æ–‡ä»¶å¤¹è·¯å¾„
      */
     public static String getSystemTempPath() {
         Properties p = System.getProperties();

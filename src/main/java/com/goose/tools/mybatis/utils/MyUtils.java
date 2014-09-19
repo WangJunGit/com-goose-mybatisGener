@@ -117,9 +117,9 @@ public class MyUtils
     }
 
     /**
-     * Ê××ÖÄ¸´óĞ´»¯
-     * @param src   ×Ö·û´®
-     * @return      Ê××ÖÄ¸´óĞ´ºóµÄ×Ö·û´®
+     * é¦–å­—æ¯å¤§å†™åŒ–
+     * @param src   å­—ç¬¦ä¸²
+     * @return      é¦–å­—æ¯å¤§å†™åçš„å­—ç¬¦ä¸²
      */
     public static String upperFirstLetter(String src)
     {
@@ -131,9 +131,9 @@ public class MyUtils
     }
 
     /**
-     * Ê××ÖÄ¸Ğ¡Ğ´
-     * @param src   ×Ö·û´®
-     * @return      Ê××ÖÄ¸Ğ¡Ğ´ºóµÄ×Ö·û´®
+     * é¦–å­—æ¯å°å†™
+     * @param src   å­—ç¬¦ä¸²
+     * @return      é¦–å­—æ¯å°å†™åçš„å­—ç¬¦ä¸²
      */
     public static String lowerFirstLetter(String src)
     {

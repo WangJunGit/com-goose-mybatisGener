@@ -15,10 +15,10 @@ public final class DbAccess {
 	private CallableStatement callstmt = null;
 	
 	/**
-	 * ÆÕÍ¨²éÑ¯£¨²»·ÖÒ³£©
-	 * @param sql	²éÑ¯Óï¾ä
-	 * @param para	²éÑ¯Ìõ¼ş
-	 * @return		²éÑ¯½á¹û
+	 * æ™®é€šæŸ¥è¯¢ï¼ˆä¸åˆ†é¡µï¼‰
+	 * @param sql	æŸ¥è¯¢è¯­å¥
+	 * @param para	æŸ¥è¯¢æ¡ä»¶
+	 * @return		æŸ¥è¯¢ç»“æœ
 	 */
 	public String[][] executeQuery(String sql, List<String> para) {
 		try {
@@ -35,9 +35,9 @@ public final class DbAccess {
 	
 	
 	/**
-	 * ÉèÖÃ²ÎÊı
-	 * @param sql	sqlÓï¾ä
-	 * @param para	²ÎÊı¼¯ºÏ£¬Ã¿Ò»¸öÔªËØ¶¼ÎªStringÀàĞÍ
+	 * è®¾ç½®å‚æ•°
+	 * @param sql	sqlè¯­å¥
+	 * @param para	å‚æ•°é›†åˆï¼Œæ¯ä¸€ä¸ªå…ƒç´ éƒ½ä¸ºStringç±»å‹
 	 * @throws Exception
 	 */
 	private void setParameter(String sql, List<String> para) throws Exception {
@@ -52,8 +52,8 @@ public final class DbAccess {
 	}
 	
 	/**
-	 * ´Ó½á¹û¼¯»ñÈ¡Êı¾İ
-	 * @return	²éÑ¯½á¹û
+	 * ä»ç»“æœé›†è·å–æ•°æ®
+	 * @return	æŸ¥è¯¢ç»“æœ
 	 * @throws Exception
 	 */
 	private String[][] getResult() throws Exception {
@@ -71,7 +71,7 @@ public final class DbAccess {
 		}
 		this.rs.close();
 		this.rs = null;
-		//°ÑListÖĞµÄÊı¾İ×ª»»³ÉString[][]
+		//æŠŠListä¸­çš„æ•°æ®è½¬æ¢æˆString[][]
 		if (tmpList != null) {
 			result = new String[tmpList.size()][length];
 			for (int i = 0; i < tmpList.size(); i++) {
@@ -82,7 +82,7 @@ public final class DbAccess {
 	}
 	
 	/**
-	 * ÊÍ·ÅËùÓĞ×ÊÔ´
+	 * é‡Šæ”¾æ‰€æœ‰èµ„æº
 	 */
 	private void close() {
 		try {

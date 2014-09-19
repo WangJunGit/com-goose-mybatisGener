@@ -64,7 +64,7 @@ public class FileCreate
                     CoreConfigFile.createFile(table_name, list2, info);
 //                InterfaceFile.createFile(table_name, list2, info);
 //                Impl.createFile(table_name, list2, info);
-                    //TODO ÔİÈ±                Test.createFile(table_name, list2, info);
+                    //TODO æš‚ç¼º                Test.createFile(table_name, list2, info);
                 }
                 createFile(list, info, tempPath + "core-service/src/main/resources/dao/");
                 createFile(list, info, tempPath + "query-service/src/main/resources/dao/");
@@ -146,9 +146,9 @@ public class FileCreate
     }
 
     /**
-     * ´´½¨±¾µØÄ¿Â¼
-     * @param path	Ä¿Â¼
-     * @return		true-³É¹¦ false-Ê§°Ü
+     * åˆ›å»ºæœ¬åœ°ç›®å½•
+     * @param path	ç›®å½•
+     * @return		true-æˆåŠŸ false-å¤±è´¥
      */
     public static boolean createLocalPath(String path) throws Exception
     {
@@ -171,9 +171,9 @@ public class FileCreate
     }
 
     /**
-     * É¾³ı±¾µØÄ¿Â¼¼°¸ÃÄ¿Â¼ÏÂËùÓĞÎÄ¼ş
-     * @param path	Ä¿Â¼
-     * @return		true-³É¹¦ false-Ê§°Ü
+     * åˆ é™¤æœ¬åœ°ç›®å½•åŠè¯¥ç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶
+     * @param path	ç›®å½•
+     * @return		true-æˆåŠŸ false-å¤±è´¥
      */
     public static boolean deleteLocalPath(String path)
     {
