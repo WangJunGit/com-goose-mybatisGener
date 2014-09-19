@@ -1,7 +1,7 @@
 com-goose-mybatisGener
 ======================
 
-mybaitis自动生成代码 maven版本
+mybatis自动生成代码 maven版本
 
 工程编码：GBK
 
