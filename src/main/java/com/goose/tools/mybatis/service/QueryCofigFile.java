@@ -13,9 +13,7 @@ public class QueryCofigFile {
 	        PrintWriter out = null;
 	        try
 	        {
-	        	System.out.println(info.toString()+"............");
 	            String fullPackage = info.getPackage_entity() + "." + MyUtils.formatToClassName(tableName);
-	           System.out.println(fullPackage);
 	            TableProperties first = list.get(0);
 	            String className = MyUtils.formatToClassName(tableName);
 	            String idName = list.get(0).getName();
