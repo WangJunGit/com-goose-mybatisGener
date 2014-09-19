@@ -1,13 +1,13 @@
 com-goose-mybatisGener
 ======================
 
-mybatis×Ô¶¯Éú³É´úÂë maven°æ±¾
+mybatisè‡ªåŠ¨ç”Ÿæˆä»£ç  mavenç‰ˆæœ¬
 
-¹¤³Ì±àÂë£ºGBK
+å·¥ç¨‹ç¼–ç ï¼šUTF-8
 
-ÔËĞĞ£º/com-goose-mybatisGener/src/main/java/com/goose/tools/mybatis/frame/MyBatis.java Æô¶¯ 
+è¿è¡Œï¼š/com-goose-mybatisGener/src/main/java/com/goose/tools/mybatis/frame/MyBatis.java å¯åŠ¨ 
 
-Éú³ÉÎÄ¼şÎ»ÖÃ£º\com-goose-mybatisGener\target\classes
+ç”Ÿæˆæ–‡ä»¶ä½ç½®ï¼š\com-goose-mybatisGener\target\classes
 
-Ä¿Ç°°æ±¾Ö»Ö§³Ömysql  »¹ÔÚ¸Ä½øÖĞ¡£¡£¡£¡£¡£¡£
+ç›®å‰ç‰ˆæœ¬åªæ”¯æŒmysql  è¿˜åœ¨æ”¹è¿›ä¸­ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 
