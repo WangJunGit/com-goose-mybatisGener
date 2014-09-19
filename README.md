@@ -1,4 +1,13 @@
 com-goose-mybatisGener
 ======================
 
-mybaitis鑷姩鐢熸垚浠ｇ爜 maven鐗堟湰
+mybaitis自动生成代码 maven版本
+
+工程编码：GBK
+
+运行：/com-goose-mybatisGener/src/main/java/com/goose/tools/mybatis/frame/MyBatis.java 启动 
+
+生成文件位置：\com-goose-mybatisGener\target\classes
+
+目前版本只支持mysql  还在改进中。。。。。。
+
